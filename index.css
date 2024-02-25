@@ -1,23 +1,161 @@
 * {
-  font-family: "Anta", Arial, Helvetica, sans-serif;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
 }
 
-body {
-  background: #191919;
-}
-
-a {
-  text-decoration: none;
+p {
+  margin: 0;
 }
 
 body {
   background-color: #0B3D91;
-  animation: cosmicShift 60s infinite;
+  animation: cosmicShift 15s infinite;
   display: flex;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   padding: 0;
   margin: 0;
+  justify-content: center;
+  align-items: center;
+}
+body #parent-container {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  max-width: 850px;
+}
+body #parent-container .container {
+  justify-content: center;
+  align-items: center;
+}
+body #parent-container #pfp {
+  text-align: center;
+  margin-bottom: 30px;
+}
+body #parent-container #survey {
+  background: rgba(15, 15, 15, 0.76);
+  border-radius: 8px;
+  padding: 24px;
+}
+body #parent-container #survey .title p {
+  font-weight: bold;
+  font-size: 24px;
+  color: white;
+  padding-bottom: 10px;
+}
+body #parent-container #survey .option-list {
+  display: flex;
+  flex-direction: column;
+}
+body #parent-container #survey .option-list .option {
+  border-radius: 8px;
+  cursor: pointer;
+}
+body #parent-container #survey .option-list .option p {
+  color: white;
+  font-size: 22px;
+  font-weight: 500;
+  padding: 6px 10px;
+}
+body #parent-container #survey .option-list .option:hover {
+  background: rgba(170, 170, 170, 0.3);
+}
+body #parent-container #socials {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+body #parent-container #socials .row {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  margin-bottom: 20px;
+}
+body #parent-container #socials .row .card {
+  display: flex;
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  align-items: center;
+}
+body #parent-container #socials .row .card .social-img {
+  height: 50px;
+  margin-left: 5px;
+}
+body #parent-container #socials .row .card .info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+}
+body #parent-container #socials .row .card .info .social-title {
+  font-weight: 500;
+  font-size: 18px;
+  color: #cccccc;
+}
+body #parent-container #socials .row .card .info .details {
+  font-weight: bold;
+  font-size: 24px;
+  color: white;
+}
+body #parent-container #socials .row .card .copy-to-clipboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 5px;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+body #parent-container #socials .row .card .copy-to-clipboard img {
+  height: 20px;
+  width: 20px;
+}
+body #parent-container #socials .row .card .copy-to-clipboard .copy-text {
+  color: white;
+  font-weight: 500;
+  margin-top: 4px;
+  font-size: 14px;
+}
+body #parent-container #socials .row .card .copy-to-clipboard:hover {
+  background: rgba(170, 170, 170, 0.3);
+}
+body #parent-container #socials .row .card:nth-child(even) {
+  margin-left: 20px;
+}
+body #parent-container #socials .row #battlenet {
+  border: 3px solid #3F8FF7;
+}
+body #parent-container #socials .row #discord {
+  border: 3px solid #586AEA;
+}
+body #parent-container #socials .row #steam {
+  border: 3px solid #fff;
+}
+body #parent-container #socials .row #league {
+  border: 3px solid #CEA146;
+}
+body #parent-container #socials .row #epic {
+  border: 3px solid #fff;
+}
+body #parent-container #socials .row #github {
+  border: 3px solid #fff;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #0B0B0B;
+  padding: 10px 0px;
+  color: white;
+  text-align: center;
+}
+.footer a {
+  font-size: 14px;
+  text-decoration: none;
+  color: white;
 }
 
 @keyframes cosmicShift {

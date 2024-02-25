@@ -1,29 +1,170 @@
 * {
-    font-family: 'Anta', Arial, Helvetica, sans-serif;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
 }
 
-body {
-    background: #191919;
-}
-
-a {
-    text-decoration: none;
+p {
+    margin: 0;
 }
 
 body {
     background-color: #0B3D91; 
-    animation: cosmicShift 60s infinite;
+    animation: cosmicShift 15s infinite;
     display: flex;
-    height: 100%;
+    height: 100vh;
     width: 100%;
     padding: 0;
     margin: 0;
+    justify-content: center;
+    align-items: center;
+    #parent-container {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        max-width: 850px;
+        .container {
+            justify-content: center;
+            align-items: center;
+        }
+        #pfp {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        #survey {
+            background: rgba(15, 15, 15, 0.76);
+            border-radius: 8px;
+            padding: 24px;
+            .title { 
+                p {
+                    font-weight: bold;
+                    font-size: 24px;
+                    color: white;
+                    padding-bottom: 10px;
+                }
+            }
+            .option-list {
+                display: flex;
+                flex-direction: column;
+                .option {
+                    border-radius: 8px;
+                    cursor: pointer;
+                    p {
+                        color: white;
+                        font-size: 22px;
+                        font-weight: 500;
+                        padding: 6px 10px;
+                    }
+                    &:hover {
+                        background:rgba(170, 170, 170, 0.3)
+                    }
+                }
+            }
+        }
+        #socials {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+            .row {
+                display: flex;
+                flex: 1;
+                width: 100%;
+                margin-bottom: 20px;
+                .card {
+                    display: flex;
+                    flex: 1;
+                    padding: 10px;
+                    border-radius: 8px;
+                    align-items: center;
+                    .social-img {
+                        height: 50px;
+                        margin-left: 5px;
+                    }
+                    .info {
+                        display: flex;
+                        flex-direction: column;
+                        margin-left: 15px;
+                        .social-title {
+                            font-weight: 500;
+                            font-size: 18px;
+                            color: #cccccc;
+                        }
+                        .details {
+                            font-weight: bold;
+                            font-size: 24px;
+                            color: white;
+                        }
+                    }
+                    .copy-to-clipboard {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        margin-left: auto;
+                        margin-right: 5px;
+                        padding: 8px;
+                        cursor: pointer;
+                        border-radius: 8px;
+                        img {
+                            height: 20px;
+                            width: 20px;
+                        }
+                        .copy-text {
+                            color: white;
+                            font-weight: 500;
+                            margin-top: 4px;
+                            font-size: 14px;
+                        }
+                        &:hover {
+                            background:rgba(170, 170, 170, 0.3)
+                            
+                        }
+                    }
+                }
+                .card:nth-child(even) {
+                    margin-left: 20px;
+                }
+                #battlenet {
+                    border: 3px solid #3F8FF7;
+                }
+                #discord {
+                    border: 3px solid #586AEA;
+                }
+                #steam {
+                    border: 3px solid #fff;
+                }
+                #league {
+                    border: 3px solid #CEA146;
+                }
+                #epic {
+                    border: 3px solid #fff;
+                }
+                #github {
+                    border: 3px solid #fff;
+                }
+            }
+        }
+    }
 }
-  
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #0B0B0B;
+    padding: 10px 0px;
+    color: white;
+    text-align: center;
+    a {
+        font-size: 14px;
+        text-decoration: none;
+        color: white;
+    }
+}
+
 @keyframes cosmicShift {
     0%, 100% { background-color: #0B3D91; } // Deep Space Blue
     25% { background-color: #32174D; } // Galactic Purple
     50% { background-color: #553285; } // Nebula Magenta
     75% { background-color: #342E5F; } // Twilight Violet
 }
-  
+
