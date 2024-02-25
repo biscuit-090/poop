@@ -1,6 +1,5 @@
 * {
-    font-family: Roboto, serif;
-    transition: 0.2s;
+    font-family: 'Anta', Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -10,4 +9,21 @@ body {
 a {
     text-decoration: none;
 }
-/*# sourceMappingURL=styles.css.map */
+
+body {
+    background-color: #0B3D91; 
+    animation: cosmicShift 60s infinite;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+  
+@keyframes cosmicShift {
+    0%, 100% { background-color: #0B3D91; } // Deep Space Blue
+    25% { background-color: #32174D; } // Galactic Purple
+    50% { background-color: #553285; } // Nebula Magenta
+    75% { background-color: #342E5F; } // Twilight Violet
+}
+  
