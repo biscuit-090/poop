@@ -49,14 +49,15 @@ body #parent-container #survey .title {
   display: flex;
   flex-direction: column;
 }
-body #parent-container #survey .title p {
+body #parent-container #survey .title .main {
   font-weight: bold;
   font-size: 24px;
   color: white;
 }
-body #parent-container #survey .title span {
-  color: grey;
+body #parent-container #survey .title .span {
+  color: #999;
   padding-top: 4px;
+  font-weight: normal;
 }
 body #parent-container #survey .option-list {
   display: flex;
