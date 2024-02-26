@@ -12,29 +12,24 @@
 </head>
 <body>
     <div id="parent-container">
-        <div id="pfp" class="container">
+        <div id="pfp" class="container" style="--animation-order: 1;">
             <img src="img/pfp no bg.png">
         </div>
-        <div id="survey" class="container">
+        <div id="survey" class="container" style="--animation-order: 2;">
             <div class="title">
-                <p>So tell me, how exactly did you get here?</p>
+                <p>Answer carefully, are you a federal agent?</p>
+                <span><u>Double click</u> to choose your answer</span>
             </div>
             <div class="option-list">
-                <div class="option">
-                    <p>> I stalked your profile on Discord.</p>
+                <div id="option1" class="option">
+                    <p>> Yes, I am a fed.</p>
                 </div>
-                <div class="option">
-                    <p>> I searched Google for it.</p>
-                </div>
-                <div class="option">
-                    <p>> A friend linked me to it after stalking your Discord.</p>
-                </div>
-                <div class="option">
-                    <p>> I typed a random set of characters into my browser and it took me here.</p>
+                <div id="option2" class="option">
+                    <p>> No, I'm not a fed.</p>
                 </div>
             </div>
         </div>
-        <div id="socials">
+        <div id="socials" class="container" style="--animation-order: 3;">
             <div class="row">
                 <div id="battlenet" class="card">
                     <img class="social-img" src="img/battlenet.png">
@@ -112,5 +107,6 @@
     <footer class="footer">
         <a href="https://www.youtube.com/watch?v=TlXDyO4fyD4" target="_blank">Click to get rick-rolled</a>
     </footer>
+    <script src="index.js"></script>
 </body>
 </html>

@@ -16,6 +16,9 @@ body {
   margin: 0;
   justify-content: center;
   align-items: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 body #parent-container {
   display: flex;
@@ -24,23 +27,36 @@ body #parent-container {
   max-width: 850px;
 }
 body #parent-container .container {
-  justify-content: center;
-  align-items: center;
+  display: block;
+  animation-name: animateIn;
+  animation-duration: 350ms;
+  animation-delay: calc(var(--animation-order) * 150ms);
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
 }
 body #parent-container #pfp {
   text-align: center;
   margin-bottom: 30px;
 }
 body #parent-container #survey {
+  display: flex;
+  flex-direction: column;
   background: rgba(15, 15, 15, 0.76);
   border-radius: 8px;
   padding: 24px;
+}
+body #parent-container #survey .title {
+  display: flex;
+  flex-direction: column;
 }
 body #parent-container #survey .title p {
   font-weight: bold;
   font-size: 24px;
   color: white;
-  padding-bottom: 10px;
+}
+body #parent-container #survey .title span {
+  color: grey;
+  padding-top: 4px;
 }
 body #parent-container #survey .option-list {
   display: flex;
@@ -49,15 +65,26 @@ body #parent-container #survey .option-list {
 body #parent-container #survey .option-list .option {
   border-radius: 8px;
   cursor: pointer;
+  transition: 0.1s;
 }
 body #parent-container #survey .option-list .option p {
   color: white;
   font-size: 22px;
   font-weight: 500;
-  padding: 6px 10px;
+  padding: 8px 8px 8px 0px;
 }
 body #parent-container #survey .option-list .option:hover {
   background: rgba(170, 170, 170, 0.3);
+  margin-left: 8px;
+  transition: 0.1s;
+}
+body #parent-container #survey .option-list .option:hover p {
+  color: deepskyblue;
+  font-weight: 700;
+  padding: 8px 8px 8px 8px;
+}
+body #parent-container #survey .option-list .option:first-of-type {
+  margin-top: 10px;
 }
 body #parent-container #socials {
   display: flex;
@@ -170,5 +197,14 @@ body #parent-container #socials .row #github {
   }
   75% {
     background-color: #342E5F;
+  }
+}
+@keyframes animateIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.6) translateY(-8px);
+  }
+  100% {
+    opacity: 1;
   }
 }/*# sourceMappingURL=index.css.map */
