@@ -57,7 +57,6 @@ body #parent-container #survey .title .main {
 body #parent-container #survey .title .span {
   color: #999;
   padding-top: 4px;
-  font-weight: normal;
 }
 body #parent-container #survey .option-list {
   display: flex;
@@ -207,5 +206,28 @@ body #parent-container #socials .row #github {
   }
   100% {
     opacity: 1;
+  }
+}
+@media only screen and (max-width: 1090px) {
+  .row {
+    flex-direction: column !important;
+    margin: 0 !important;
+  }
+  .card {
+    margin: 10px 0px !important;
+  }
+  #parent-container {
+    width: 85% !important;
+    padding-bottom: 60px;
+  }
+  body {
+    justify-content: baseline !important;
+    align-items: baseline !important;
+    padding: 40px 0px;
+  }
+}
+@media only screen and (max-width: 529px) {
+  .copy-to-clipboard {
+    display: none !important;
   }
 }/*# sourceMappingURL=index.css.map */
